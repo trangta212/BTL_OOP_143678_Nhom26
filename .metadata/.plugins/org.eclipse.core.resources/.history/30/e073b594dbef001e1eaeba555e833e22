@@ -1,0 +1,9 @@
+#Login {
+    -fx-font-size: 18px;
+    -fx-text-fill: white; /* Chuyển màu chữ thành trắng */
+    -fx-background-color: black; /* Đặt màu nền là đen */
+}
+#img1 {
+    border-radius: 50%; /* Sử dụng giá trị 50% để tạo hình tròn */
+    overflow: hidden; /* Đảm bảo hình ảnh bên trong không vượt qua biên của hình tròn */
+}

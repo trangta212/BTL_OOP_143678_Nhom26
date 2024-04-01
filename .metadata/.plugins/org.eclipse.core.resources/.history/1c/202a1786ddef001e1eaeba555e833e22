@@ -1,0 +1,39 @@
+#Login {
+    -fx-font-size: 18px;
+    -fx-text-fill: white; /* Chuyển màu chữ thành trắng */
+    -fx-background-color: black; /* Đặt màu nền là đen */
+}
+
+#Forgot {
+    -fx-underline: true; /* Sử dụng gạch chân chữ */
+        -fx-underline-color: black; /* Đặt màu của dấu gạch chân thành đen */
+    
+}
+#img1 {
+    -fx-border-radius: 50%; /* Sử dụng giá trị 50% để tạo hình tròn */
+    -fx-background-radius: 50%; /* Sử dụng giá trị 50% để tạo hình tròn */
+}
+#Anchor1{
+		-fx-background-color:#FFF6EE;
+	    -fx-border-color: black; /* Đặt màu viền là màu đen */
+	    
+}
+#Log{
+	    -fx-font-size: 15px;
+	
+}
+#Sign{
+		    -fx-font-size: 15px;
+	
+}
+#Signup{
+		-fx-background-color:#FFF6EE;
+	    -fx-border-color: black; /* Đặt màu viền là màu đen */
+	    
+
+}
+#create{
+	 -fx-font-size: 18px;
+    -fx-text-fill: white; /* Chuyển màu chữ thành trắng */
+    -fx-background-color: black; /* Đặt màu nền là đen */
+}

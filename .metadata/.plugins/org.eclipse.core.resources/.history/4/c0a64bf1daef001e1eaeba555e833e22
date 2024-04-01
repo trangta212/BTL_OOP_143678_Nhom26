@@ -1,0 +1,11 @@
+#Img1 {
+    border-radius: 50%; /* Sử dụng giá trị 50% để tạo hình tròn */
+}
+#Log{
+		-fx-font-size: 30px;
+}
+
+#Login{
+			-fx-font-size: 30px;
+	
+}

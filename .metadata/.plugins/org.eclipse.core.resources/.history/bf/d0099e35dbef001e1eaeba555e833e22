@@ -1,0 +1,5 @@
+#Login{
+		-fx-font-size: 15px;
+		-fx-background-color:#FFF6EE;
+	
+}
