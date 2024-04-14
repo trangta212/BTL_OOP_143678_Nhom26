@@ -1,0 +1,15 @@
+{
+  "accounts": [
+  {
+    "username": "minh",
+    "email": "mingixpt@gmail.com",
+    "password": "12345678"
+  },
+  {
+    "username": "trang",
+    "email": "trang",
+    "password": "12345678"
+  }
+  ]
+}
+
