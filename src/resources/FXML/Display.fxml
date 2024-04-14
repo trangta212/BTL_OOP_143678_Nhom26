@@ -11,77 +11,79 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="432.0" stylesheets="@../styles/Display.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="437.0" stylesheets="@../styles/Display.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <TabPane layoutX="55.0" layoutY="40.0" prefHeight="426.0" prefWidth="321.0" tabClosingPolicy="UNAVAILABLE">
+        <TabPane layoutX="55.0" layoutY="40.0" prefHeight="482.0" prefWidth="324.0" tabClosingPolicy="UNAVAILABLE">
             <tabs>
-                <Tab id="Log" text="Log In">
+                <Tab id="Log" fx:id="tabLogin" text="Log In">
                     <content>
                         <AnchorPane id="Anchor1" minHeight="0.0" minWidth="0.0" prefHeight="368.0" prefWidth="321.0">
                             <children>
-                                <Label layoutX="28.0" layoutY="105.0" prefHeight="17.0" prefWidth="140.0" text="EMAIL*">
+                                <Label layoutX="28.0" layoutY="142.0" prefHeight="17.0" prefWidth="140.0" text="EMAIL*">
                                     <font>
                                         <Font size="13.0" />
                                     </font></Label>
-                                <Label layoutX="26.0" layoutY="165.0" prefHeight="17.0" prefWidth="143.0" text="PASSWORD*">
+                                <Label layoutX="26.0" layoutY="222.0" prefHeight="17.0" prefWidth="143.0" text="PASSWORD*">
                                     <font>
                                         <Font size="13.0" />
                                     </font></Label>
-                                <Label id="Forgot" layoutX="203.0" layoutY="231.0" text="Forgot password?" />
-                                <Button id="Login" fx:id="btnLogin" layoutX="73.0" layoutY="284.0" mnemonicParsing="false" onAction="#login" prefHeight="37.0" prefWidth="185.0" styleClass="..\styles\Display.css" text="Login">
+                                <Label id="Forgot" layoutX="203.0" layoutY="301.0" text="Forgot password?" />
+                        <Label fx:id="lblErrorMessageLogin" layoutX="28.0" layoutY="107.0" style="visibility: false;" text="error" textFill="RED" />
+                                <Button id="Login" fx:id="btnLogin" layoutX="72.0" layoutY="344.0" mnemonicParsing="false" onAction="#login" prefHeight="37.0" prefWidth="185.0" styleClass="..\styles\Display.css" text="Login">
                                     <font>
                                         <Font size="14.0" />
                                     </font></Button>
-                                <ImageView id="img1" fitHeight="74.0" fitWidth="117.0" layoutX="113.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../../../../../Downloads/NFT%201.jpg" />
-                                    </image>
+                                <ImageView id="img1" fitHeight="74.0" fitWidth="117.0" layoutX="126.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logo.png" />
+                           </image>
                                 </ImageView>
-                                <TextField fx:id="tfEmailLogin" layoutX="24.0" layoutY="133.0" prefHeight="25.0" prefWidth="281.0" />
-                                <TextField fx:id="tfPasswordLogin" layoutX="27.0" layoutY="192.0" prefHeight="25.0" prefWidth="275.0" />
+                                <TextField fx:id="tfEmailLogin" layoutX="24.0" layoutY="170.0" prefHeight="25.0" prefWidth="281.0" />
+                                <TextField fx:id="tfPasswordLogin" layoutX="27.0" layoutY="249.0" prefHeight="25.0" prefWidth="275.0" />
                             </children>
                         </AnchorPane>
                     </content>
                 </Tab>
-                <Tab id="Sign" text="Sign Up">
+                <Tab id="Sign" fx:id="tabSignUp" text="Sign Up">
                     <content>
-                        <AnchorPane id="Signup" minHeight="0.0" minWidth="0.0" prefHeight="395.0" prefWidth="321.0">
+                        <AnchorPane id="Signup" minHeight="0.0" minWidth="0.0" prefHeight="459.0" prefWidth="322.0">
                             <children>
-                                <Label layoutX="16.0" layoutY="88.0" text="User Name*">
+                                <Label layoutX="16.0" layoutY="137.0" text="Username*">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
                                 </Label>
-                                <Label layoutX="24.0" layoutY="146.0" prefHeight="17.0" prefWidth="74.0" text="Email*">
+                                <Label layoutX="24.0" layoutY="195.0" prefHeight="17.0" prefWidth="74.0" text="Email*">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
                                 </Label>
-                                <Label layoutX="20.0" layoutY="203.0" prefHeight="17.0" prefWidth="81.0" text="Password*">
+                                <Label layoutX="20.0" layoutY="252.0" prefHeight="17.0" prefWidth="81.0" text="Password*">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
                                 </Label>
-                                <CheckBox fx:id="checkBoxAgreeTerms" layoutX="20.0" layoutY="319.0" mnemonicParsing="false" text="I agree to the Terms">
+                                <CheckBox fx:id="checkBoxAgreeTerms" layoutX="20.0" layoutY="368.0" mnemonicParsing="false" text="I agree to the Terms">
                                     <font>
                                         <Font size="13.0" />
                                     </font>
                                 </CheckBox>
-                                <Button id="create" fx:id="btnCreateAcc" layoutX="91.0" layoutY="348.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="33.0" prefWidth="139.0" text="Create Account" />
-                                <ImageView id="Img2" fitHeight="74.0" fitWidth="111.0" layoutX="105.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../../../../../Downloads/NFT%201.jpg" />
-                                    </image>
+                                <Button id="create" fx:id="btnCreateAcc" layoutX="91.0" layoutY="397.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="33.0" prefWidth="139.0" text="Create Account" />
+                                <ImageView id="Img2" fitHeight="74.0" fitWidth="111.0" layoutX="125.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logo.png" />
+                           </image>
                                 </ImageView>
-                                <TextField fx:id="tfUsername" layoutX="16.0" layoutY="108.0" prefHeight="25.0" prefWidth="287.0" />
-                                <TextField fx:id="tfEmail" layoutX="16.0" layoutY="166.0" prefHeight="25.0" prefWidth="290.0" />
-                                <TextField fx:id="tfPasswordSignUp" layoutX="16.0" layoutY="224.0" prefHeight="25.0" prefWidth="288.0" />
-                                <Label layoutX="22.0" layoutY="261.0" prefHeight="20.0" prefWidth="135.0" text="Confirm Password*">
+                                <TextField fx:id="tfUsernameSignUp" layoutX="16.0" layoutY="157.0" prefHeight="25.0" prefWidth="287.0" />
+                                <TextField fx:id="tfEmailSignUp" layoutX="16.0" layoutY="215.0" prefHeight="25.0" prefWidth="290.0" />
+                                <TextField fx:id="tfPasswordSignUp" layoutX="16.0" layoutY="273.0" prefHeight="25.0" prefWidth="288.0" />
+                                <Label layoutX="22.0" layoutY="310.0" prefHeight="20.0" prefWidth="135.0" text="Confirm Password*">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
                                 </Label>
-                                <TextField fx:id="tfPasswordCfSignUp" layoutX="17.0" layoutY="281.0" prefHeight="25.0" prefWidth="288.0" />
+                                <TextField fx:id="tfPasswordCfSignUp" layoutX="17.0" layoutY="330.0" prefHeight="25.0" prefWidth="288.0" />
+                        <Label fx:id="lblErrorMessageSignUp" layoutX="17.0" layoutY="104.0" prefHeight="18.0" prefWidth="295.0" style="visibility: false;" text="Error" textFill="RED" />
                             </children></AnchorPane>
                     </content>
                 </Tab>

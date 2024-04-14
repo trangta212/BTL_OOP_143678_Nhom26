@@ -20,7 +20,7 @@ public class Main extends Application {
 
 	        Scene scene = new Scene(parent);
 			primaryStage.setScene(scene);
-	        primaryStage.setTitle("Login");
+	        primaryStage.setTitle("App");
 	        primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
