@@ -3,12 +3,12 @@ package application.data;
 public class Account {
     private String username;
     private String email;
-    private String password;
+    private String hashPassword;
 
     public Account(String username, String email, String password) {
         this.username = username;
         this.email = email;
-        this.password = password;
+        this.hashPassword = password.hashCode() + "";
     }
 
     public Account() {
@@ -32,11 +32,16 @@ public class Account {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getHashPassword() {
+        return hashPassword;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.hashPassword = password.hashCode() + "";
+    }
+
+    public static void main(String[] args) {
+        String password = "12345678";
+        System.out.println(password.hashCode() + "");
     }
 }

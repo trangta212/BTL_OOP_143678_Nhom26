@@ -134,10 +134,16 @@ public class LoginController {
                 return;
             }
         }
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Account created");
+        alert.setHeaderText("Account created successfully");
+        alert.setContentText("You can now sign in with your new account.");
+        alert.showAndWait();
+
         Account newAccount = new Account(tfUsernameSignUp.getText(), tfEmailSignUp.getText(), tfPasswordSignUp.getText());
         accounts.getAccounts().add(newAccount);
         ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.writeValue(new File("src/database/users.json"), accounts);
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("src/database/users.json"), accounts);
         System.out.println("Account created successfully");
         clearAllFieldsSignUp();
     }
@@ -155,11 +161,14 @@ public class LoginController {
             return;
         }
         for (Account account : accounts.getAccounts()) {
-            if (account.getEmail().equals(tfEmailLogin.getText()) && account.getPassword().equals(tfPasswordLogin.getText())) {
+            String emailLogin = tfEmailLogin.getText();
+            String passwordLogin = tfPasswordLogin.getText();
+            String passwordHash = passwordLogin.hashCode() + "";
+            if (account.getEmail().equals(emailLogin) && account.getHashPassword().equals(passwordHash)) {
                 System.out.println("Login successful");
                 return;
             }
-            if (account.getEmail().equals(tfEmailLogin.getText()) && !account.getPassword().equals(tfPasswordLogin.getText())) {
+            if (account.getEmail().equals(emailLogin) && !account.getHashPassword().equals(passwordHash)) {
                 errorMessage = "Password is incorrect. Please try again.";
                 break;
             }
